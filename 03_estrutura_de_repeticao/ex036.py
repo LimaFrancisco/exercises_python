@@ -15,6 +15,9 @@ num = int(input("set up the multiplication table: "))
 start = int(input("starts with: "))
 end = int(input("end by: "))
 
-print(f"I will set up the {num:.0f} times table starting with {start:.0f} and ending with {end:.0f}:")
-for index in range(start, end + 1):
-    print(f"{num:.0f} X {index:.0f} = {num * index:.0f}")
+if start < end:
+    print(f"I will set up the {num:.0f} times table starting with {start:.0f} and ending with {end:.0f}:")
+    for index in range(start, end + 1):
+        print(f"{num:.0f} X {index:.0f} = {num * index:.0f}")
+elif start >= end:
+    print("impossible to calculate multiplication tables")
