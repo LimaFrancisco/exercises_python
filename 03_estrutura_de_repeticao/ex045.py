@@ -19,9 +19,20 @@ Gabarito da Prova:
 
 Após concluir isto você poderia incrementar o programa permitindo que o professor digite o gabarito da prova antes dos alunos usarem o programa. 
 """
+template = []
+
+for index in range(0, 10):
+    response = (input(f"provide the answer to question {index + 1:.0f}(A,B,C,D,E): "))
+    response = response.upper()
+
+    if response == 'A' or response == 'B' or response == 'C' or response == 'C' or response == 'D' or response == 'E':
+        template.append(response)
+    else:
+        print("invalid answer")
+
+print(template)
 
 student_template = []
-template = ['A','B','C','D','E','E','D','C','B','A']
 note = 0
 
 highest_note = 0
