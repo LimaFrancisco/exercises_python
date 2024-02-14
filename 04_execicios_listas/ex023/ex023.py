@@ -22,7 +22,16 @@ Nr.  Usuário        Espaço utilizado     % do uso
 
 Espaço total ocupado: 2581,57 MB
 Espaço médio ocupado: 430,26 MB
+
+O arquivo de entrada deve ser lido uma única vez, e os dados armazenados em memória, caso sejam necessários, de forma a agilizar a execução do programa. A conversão da espaço ocupado em disco, de bytes para megabytes deverá ser feita através de uma função separada, que será chamada pelo programa principal. O cálculo do percentual de uso também deverá ser feito através de uma função, que será chamada pelo programa principal. 
 """
+
+def conversion(bytes):
+    return (bytes / 1024) / 1024
+
+def percent(total, part):
+    return (total / part) * 100
+
 
 name = []
 space = []
@@ -46,9 +55,9 @@ file = open("ex023/relatorio.txt","x")
 file.write(f"ACME Inc.               Uso do espaço em disco pelos usuários\n{"-" * 80}\nNr.  Usuário        Espaço utilizado     % do uso\n\n")
 
 for index in range(0,6):
-    personSpace = (space[index] / 1024) /1024
-    file.write(f"{index + 1:<5}{name[index]:15} {personSpace:10.2f} MB{(personSpace / ((sum(space) / 1024) / 1024)) * 100:16.2f}%\n")
+    personSpace = conversion(space[index])
+    file.write(f"{index + 1:<5}{name[index]:15} {personSpace:10.2f} MB{percent(personSpace, conversion(sum(space))):16.2f}%\n")
 
-file.write(f"\nEspaço total ocupado: {(sum(space) / 1024) / 1024:.2f} MB\nEspaço médio ocupado: {((sum(space) / 1024) / 1024) / 6:.2f} MB")
+file.write(f"\nEspaço total ocupado: {conversion(sum(space)):.2f} MB\nEspaço médio ocupado: {conversion(sum(space)) / 6:.2f} MB")
 
 file.close()
