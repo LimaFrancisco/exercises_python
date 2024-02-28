@@ -18,4 +18,3 @@ if len(formatted_fone) == 7:
     print(f"Fixed phone without formatting: {formatted_fone}")
     fone = '3' + formatted_fone
     print(f"Fixed phone with formatting: {fone}")
-
