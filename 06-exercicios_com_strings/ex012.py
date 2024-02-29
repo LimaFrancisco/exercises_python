@@ -18,7 +18,4 @@ if len(formatted_fone) == 7:
     print(f"Fixed phone without formatting: {formatted_fone}")
     fone = '3' + formatted_fone
     print(f"Fixed phone with formatting: {fone}")
-<<<<<<< HEAD
-=======
-
->>>>>>> 5afe5131998651c36d466f6324e4dceb575f144a
+    
