@@ -14,6 +14,10 @@ class Monkey:
 
     def getStomach(self):
         print(f"{self.name}`s stomach:")
+
+        if len(self.stomach) == 0:
+            print("empty") 
+
         for food in self.stomach:
             print(food)
 

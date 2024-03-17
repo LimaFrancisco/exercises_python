@@ -1,22 +1,30 @@
 from monkey import Monkey
+from cannibal_monkey import CannibalMonkey
 
-monkey1 = Monkey("Cesar")
-monkey2 = Monkey("Maurice")
+m1 = Monkey("Cesar")
+m2 = Monkey("Morrice")
 
-monkey1.to_eat("banana")
-monkey1.to_eat("sandwish")
-monkey1.to_eat("apple")
+mc = CannibalMonkey("Hannibal")
 
-monkey1.getStomach()
+m1.to_eat("banana")
+m1.to_eat("bread")
+m1.to_eat("meet")
 
-monkey1.to_eat("cracker")
-monkey1.digest()
+m2.to_eat("pasta")
+m2.to_eat("apple")
 
-monkey1.getStomach()
+m1.getStomach()
+m2.getStomach()
 
-# monkey2.to_eat("banana")
-# monkey2.to_eat("sandwish")
-# monkey2.to_eat("apple")
-# monkey2.to_eat("cracker")
+m1.digest()
+m2.digest()
 
-# monkey2.getStomach()
+m1.getStomach()
+m2.getStomach()
+
+mc.to_eat(m1)
+mc.to_eat(m2)
+
+mc.getStomach()
+
+mc.digest()
