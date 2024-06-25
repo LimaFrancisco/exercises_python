@@ -1,0 +1,1 @@
+from .quadrado import Quadrado
