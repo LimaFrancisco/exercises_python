@@ -1,0 +1,37 @@
+from models import Televisor
+
+tv = Televisor()
+print(tv.diminuir_volume())
+print(tv.diminuir_volume())
+print(tv.diminuir_volume())
+print(tv.diminuir_volume())
+print(tv.diminuir_volume())
+print(tv.diminuir_volume())
+print(tv.diminuir_volume())
+
+print(tv.aumentar_volume())
+print(tv.aumentar_volume())
+print(tv.aumentar_volume())
+print(tv.aumentar_volume())
+print(tv.aumentar_volume())
+print(tv.aumentar_volume())
+
+print(tv.avancar_canal())
+print(tv.avancar_canal())
+print(tv.avancar_canal())
+print(tv.avancar_canal())
+print(tv.avancar_canal())
+
+print(tv.voltar_canal())
+print(tv.voltar_canal())
+print(tv.voltar_canal())
+print(tv.voltar_canal())
+print(tv.voltar_canal())
+print(tv.voltar_canal())
+print(tv.voltar_canal())
+
+print(tv.avancar_canal())
+print(tv.avancar_canal())
+print(tv.avancar_canal())
+print(tv.avancar_canal())
+print(tv.avancar_canal())
